@@ -27,8 +27,8 @@
        ?>
             <div class="container">
                 <div class="container d-flex align-items-center justify-content-between mt-3">
-                    <h4>Student List</h4>
-                    <div class="d-flex  align-items-center"> <i class="bi bi-chevron-expand" style="color: blue;"></i><a href="add.php"><button type="button" class="btn btn-primary">ADD NEW STUDENT</button></a>
+                    <h4>List Course</h4>
+                    <div class="d-flex  align-items-center"> <i class="bi bi-chevron-expand" style="color: blue;"></i><a href="for_cour.php"><button type="button" class="btn btn-primary">Add New Course</button></a>
                     </div>
 
                 </div>
@@ -41,10 +41,28 @@
                             <th scope="col">Date of</th>
                             <th></th>
                         </tr>
-                       
+                        <?php
+                            include ('conecter.php');
+                            $sql = "SELECT * FROM courses";
+                            $result = mysqli_query($conne,$sql);
+                            if($result){
+                                while ($row = mysqli_fetch_assoc($result)){
+                                    echo '<tr>
+                                    <td> </td>
+
+                                            <td>'.$row['name'].'</td>
+                                            <td>'.$row['date'].'</td>
+                                            <td>
+                                                <a href="updatecourse.php?id='.$row['id'].'"><i class="bi bi-pencil" style="color:blue;"></i></a>
+                                                <a href="deletecourse.php?id='.$row['id'].'"><i class="bi bi-trash" style="color: red;"></i></a>
+                                            </td>
+                                        </tr>';
+                                }
+                            }
+                            mysqli_close($conne);
+                        ?>
                     </thead>
                     
-
             </div>
         </div>
 

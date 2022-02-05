@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <title>Document</title>
+    <title>payment</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="container d-flex align-items-center justify-content-between mt-3">
                     <h4 class="fw-bold">Payment Details</h4>
-                    <a href="" class="fs-5"><i class="bi bi-chevron-expand" style="color: blue;"></i></a>
+                    <div class="d-flex  align-items-center"> <i class="bi bi-chevron-expand" style="color: blue;"></i><a href="addpay.php"><button type="button" class="btn btn-primary">Add New Payment</button></a>
                 </div>
 
             </div>
@@ -44,16 +44,28 @@
                         <th scope="col">Date</th>
                         <th></th>
                     </tr>
-
+                    <?php
+                            include ('conecter.php');
+                            $sql = "SELECT * FROM payment_details";
+                            $result = mysqli_query($conne,$sql);
+                            if($result){
+                                while ($row = mysqli_fetch_assoc($result)){
+                                    echo '<tr>
+                                            <td>'.$row['name'].'</td>
+                                            <td>'.$row['Payment_schedule'].'</td>
+                                            <td>'.$row['bill_number'].'</td>
+                                            <td>'.$row['amount_paid'].'</td>
+                                            <td>'.$row['balance_amount'].'</td>
+                                            <td>'.$row['date'].'</td>
+                                        </tr>';
+                                }
+                            }
+                            mysqli_close($conne);
+                        ?>
+                        
                 </thead>
 
-                <tbody>
-
-                <?php
-                  include('table payment.php')
-                  ?>
-
-                </tbody>
+                
             </table>
 
             </table>
