@@ -24,7 +24,7 @@ background: linear-gradient(90deg, rgba(180,185,255,1) 26%, rgba(241,185,250,1) 
 
 <!-- start body -->
 <form class="w-75 mx-auto" style="border-radius: 10px; box-shadow: 0px 0px 5px black; background-color:white;" method="POST" action="">
-    <h4 class="mt-4 ms-5 fw-bold pt-3 mb-3" style="color: purple;">ADD NEW COURSES</h4>
+    <h4 class="mt-4 ms-5 fw-bold pt-3 mb-3" style="color: purple;">UpDate Courses</h4>
     <div>
         <label for="name" class="form-label ms-5 fw-bold">Name</label>
         <input type="name" name="name" value="<?php echo $update['name'] ; ?>"  class="form-control  w-75 ms-5" required>

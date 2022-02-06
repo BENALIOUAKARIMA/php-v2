@@ -22,7 +22,7 @@
 <body style="background: rgb(130,195,249); background: linear-gradient(90deg, rgba(130,195,249,1) 0%, rgba(201,255,201,1) 72%, rgba(255,254,195,1) 100%);">
 
     <form class="w-75 mx-auto" style="border-radius: 10px; box-shadow: 0px 0px 5px black; background-color:white;" method="POST">
-        <h4 class="mt-4 ms-5 fw-bold pt-3 mb-3" style="color: purple;">ADD NEW STUDENTS</h4>
+        <h4 class="mt-4 ms-5 fw-bold pt-3 mb-3" style="color: purple;">UPDATE Student</h4>
         <div>
             <label for="name" class="form-label ms-5 fw-bold">Name</label>
             <input type="name" value="<?php echo $update['name'] ; ?>" name="name" class="form-control  w-75 ms-5" required>

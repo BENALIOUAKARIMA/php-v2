@@ -1,3 +1,6 @@
+<?php
+include ('dashboard.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,21 +37,21 @@
                     <div class="card mb-2" style="background-color: rgb(199, 242, 255);">
                         <div><i class="bi bi-mortarboard ms-2 h2" style="color: rgb(184, 184, 255);"></i></div>
                         <div class="ms-2 mt-2">Students</div>
-                        <p style="text-align: right;" class="px-2 mt-2 fw-bold">243</p>
+                        <p style="text-align: right;" class="px-2 mt-2 fw-bold"><?php echo $num_std?></p>
                     </div>
                 </div>
                 <div class="col-md-3">
                 <div class="card mb-2" style="background-color: rgb(255, 210, 215);">
                        <div><i class="bi bi-bookmark ms-2 h2 " style="color: rgb(250, 129, 150);"></i></div>
                        <div class="ms-2 mt-2">Course</div>
-                       <p style="text-align: right;" class="px-2 mt-2 fw-bold">13</p>
+                       <p style="text-align: right;" class="px-2 mt-2 fw-bold"><?php echo $num_cour?></p>
                     </div>
                 </div>
                 <div class="col-md-3">
                 <div class="card mb-2" style="background-color: rgb(255, 255, 223); ">
                         <div><i class="bi bi-currency-dollar ms-1 h2" style="color: rgb(141, 240, 253);"></i></div>
                         <div class="ms-2 mt-2">Payments</div>
-                        <p style="text-align: right;" class="px-2 mt-2 fw-bold"><span style="font-size: 12px;">DHS</span> 556,000</p>
+                        <p style="text-align: right;" class="px-2 mt-2 fw-bold"><?php echo $somme?>DHS</p>
                     </div>
                 </div>
                 <div class="col-md-3">
