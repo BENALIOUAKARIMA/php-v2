@@ -7,6 +7,9 @@
 // payment
 
   $somme="SELECT SUM(amount_paid) as somme FROM payment_details";
+  $query=mysqli_query($conne,$somme);
+  $array=mysqli_fetch_array($query);
+
 
   if(!$result = $conne->query($somme))
   {

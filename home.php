@@ -51,7 +51,7 @@ include ('dashboard.php');
                 <div class="card mb-2" style="background-color: rgb(255, 255, 223); ">
                         <div><i class="bi bi-currency-dollar ms-1 h2" style="color: rgb(141, 240, 253);"></i></div>
                         <div class="ms-2 mt-2">Payments</div>
-                        <p style="text-align: right;" class="px-2 mt-2 fw-bold"><?php echo $somme?>DHS</p>
+                        <p style="text-align: right;" class="px-2 mt-2 fw-bold"><?php echo $array['somme'];?>DHS</p>
                     </div>
                 </div>
                 <div class="col-md-3">
